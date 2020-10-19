@@ -158,38 +158,42 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try{
-            String User = txtUser.getText();
-            String Pass = txtPass.getText();
-            
-            Connection c = koneksi.GetKoneksi();
-            Statement s = c.createStatement();
-            String sql = "SELECT * FROM user WHERE username = '"+User+"' AND pass = md5('"+Pass+"')";
-            ResultSet rs = s.executeQuery(sql);
-            
-            int baris = 0;
-            String role = null;
-            
-            while(rs.next()){
-                baris = rs.getRow();
-                role = rs.getString(4);
-            }
-            
-            if(baris == 1){
-                if(role.equals("Admin")){
-                    JOptionPane.showMessageDialog(this, "Berhasil login!");
-                    String info[] = new String[1];
-                    info[0] = User;
-                    MenuAdmin.main(info);
-                    this.setVisible(false);
+        String User = txtUser.getText();
+        String Pass = txtPass.getText();
+        
+        if(User.isEmpty() || Pass.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Mohon isi username dan password");
+        }else{
+            try{
+                Connection c = koneksi.GetKoneksi();
+                Statement s = c.createStatement();
+                String sql = "SELECT * FROM user WHERE username = '"+User+"' AND pass = md5('"+Pass+"')";
+                ResultSet rs = s.executeQuery(sql);
+
+                int baris = 0;
+                String role = null;
+
+                while(rs.next()){
+                    baris = rs.getRow();
+                    role = rs.getString(4);
                 }
-            } else{
-                JOptionPane.showMessageDialog(this, "Gagal Login!");
+
+                if(baris == 1){
+                    if(role.equals("Admin")){
+                        MenuAdminMDI ma = new MenuAdminMDI();
+                        ma.show();
+                        this.dispose();
+                    }
+                } else{
+                    JOptionPane.showMessageDialog(this, "Gagal Login!");
+                }
+
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Gagal login!" + e.getMessage());
             }
-            
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Gagal login!" + e.getMessage());
         }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
