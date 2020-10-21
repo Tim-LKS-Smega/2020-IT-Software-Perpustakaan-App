@@ -42,26 +42,10 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnPinjam">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Pinjam Buku"/>
+                <Property name="text" type="java.lang.String" value="Menu Buku"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnPinjamActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mnKembali">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Kembalikan Buku"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnKembaliActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mnPerpanjang">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Perpanjang"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnPerpanjangActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

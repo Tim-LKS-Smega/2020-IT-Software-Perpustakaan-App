@@ -7,9 +7,7 @@ package ikz;
 
 import Anggota.DaftarAnggota;
 import Buku.DaftarBuku;
-import Buku.KembalikanBuku;
-import Buku.PerpanjangBuku;
-import Buku.PinjamBuku;
+import Buku.MenuBuku;
 
 /**
  *
@@ -41,8 +39,6 @@ public class MenuAdminMDI extends javax.swing.JFrame {
         mnBuku = new javax.swing.JMenu();
         mnDaftarBuku = new javax.swing.JMenuItem();
         mnPinjam = new javax.swing.JMenuItem();
-        mnKembali = new javax.swing.JMenuItem();
-        mnPerpanjang = new javax.swing.JMenuItem();
         mnAnggota = new javax.swing.JMenu();
         mnDaftarAnggota = new javax.swing.JMenuItem();
 
@@ -89,29 +85,13 @@ public class MenuAdminMDI extends javax.swing.JFrame {
         });
         mnBuku.add(mnDaftarBuku);
 
-        mnPinjam.setText("Pinjam Buku");
+        mnPinjam.setText("Menu Buku");
         mnPinjam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnPinjamActionPerformed(evt);
             }
         });
         mnBuku.add(mnPinjam);
-
-        mnKembali.setText("Kembalikan Buku");
-        mnKembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnKembaliActionPerformed(evt);
-            }
-        });
-        mnBuku.add(mnKembali);
-
-        mnPerpanjang.setText("Perpanjang");
-        mnPerpanjang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnPerpanjangActionPerformed(evt);
-            }
-        });
-        mnBuku.add(mnPerpanjang);
 
         jMenuBar1.add(mnBuku);
 
@@ -165,7 +145,7 @@ public class MenuAdminMDI extends javax.swing.JFrame {
     }//GEN-LAST:event_mnDaftarBukuActionPerformed
 
     private void mnPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPinjamActionPerformed
-        PinjamBuku pb = new PinjamBuku();
+        MenuBuku pb = new MenuBuku();
         Desktop.add(pb);
         pb.setVisible(true);
     }//GEN-LAST:event_mnPinjamActionPerformed
@@ -175,18 +155,6 @@ public class MenuAdminMDI extends javax.swing.JFrame {
         Desktop.add(da);
         da.setVisible(true);
     }//GEN-LAST:event_mnDaftarAnggotaActionPerformed
-
-    private void mnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnKembaliActionPerformed
-        KembalikanBuku kb = new KembalikanBuku();
-        Desktop.add(kb);
-        kb.setVisible(true);
-    }//GEN-LAST:event_mnKembaliActionPerformed
-
-    private void mnPerpanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPerpanjangActionPerformed
-        PerpanjangBuku pb = new PerpanjangBuku();
-        Desktop.add(pb);
-        pb.setVisible(true);
-    }//GEN-LAST:event_mnPerpanjangActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,9 +200,7 @@ public class MenuAdminMDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnDaftarAnggota;
     private javax.swing.JMenuItem mnDaftarBuku;
     private javax.swing.JMenuItem mnExit;
-    private javax.swing.JMenuItem mnKembali;
     private javax.swing.JMenuItem mnLogout;
-    private javax.swing.JMenuItem mnPerpanjang;
     private javax.swing.JMenuItem mnPinjam;
     // End of variables declaration//GEN-END:variables
 }
