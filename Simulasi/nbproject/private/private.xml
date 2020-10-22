@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/PinjamBuku.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/DaftarBuku.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/DaftarAnggota.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/MenuAdmin.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/DetailPengembalian.java</file>
+            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/Anggota/DaftarAnggota.java</file>
+            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/Buku/MenuBuku.java</file>
             <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/Login.java</file>
+            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/Buku/DaftarBuku.java</file>
             <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/koneksi.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/KembalikanBuku.java</file>
-            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/MenuSiswa.java</file>
+            <file>file:/C:/Users/Deva%20Wibowoo/Documents/NetBeansProjects/Simulasi/src/ikz/MenuAdminMDI.java</file>
         </group>
     </open-files>
 </project-private>
