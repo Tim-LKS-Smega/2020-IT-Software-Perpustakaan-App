@@ -8,6 +8,9 @@ package ikz;
 import Anggota.DaftarAnggota;
 import Buku.DaftarBuku;
 import Buku.MenuBuku;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,11 +18,14 @@ import Buku.MenuBuku;
  */
 public class MenuAdminMDI extends javax.swing.JFrame {
 
+    
+
     /**
      * Creates new form MenuAdminMDI
      */
     public MenuAdminMDI() {
         initComponents();
+        setExtendedState(MenuAdminMDI.MAXIMIZED_BOTH);
     }
 
     /**
@@ -43,8 +49,9 @@ public class MenuAdminMDI extends javax.swing.JFrame {
         mnDaftarAnggota = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu Admin");
         setPreferredSize(new java.awt.Dimension(800, 700));
-        setSize(new java.awt.Dimension(700, 700));
+        setSize(new java.awt.Dimension(800, 800));
 
         javax.swing.GroupLayout DesktopLayout = new javax.swing.GroupLayout(Desktop);
         Desktop.setLayout(DesktopLayout);
@@ -54,7 +61,7 @@ public class MenuAdminMDI extends javax.swing.JFrame {
         );
         DesktopLayout.setVerticalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 979, Short.MAX_VALUE)
+            .addGap(0, 981, Short.MAX_VALUE)
         );
 
         jMenu1.setText("File");
@@ -137,21 +144,42 @@ public class MenuAdminMDI extends javax.swing.JFrame {
     }//GEN-LAST:event_mnExitActionPerformed
 
     private void mnDaftarBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnDaftarBukuActionPerformed
-        DaftarBuku db = new DaftarBuku();
-        Desktop.add(db);
-        db.setVisible(true);
+        DaftarBuku db = DaftarBuku.getInstance();
+        db.pack();
+        if(db.isVisible()){
+            db.toFront();
+        }else{
+            Desktop.add(db);
+            db.setVisible(true);
+        }
+        
+
     }//GEN-LAST:event_mnDaftarBukuActionPerformed
 
     private void mnPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPinjamActionPerformed
-        MenuBuku pb = new MenuBuku();
-        Desktop.add(pb);
-        pb.setVisible(true);
+        MenuBuku pb = MenuBuku.getIns();
+        pb.pack();
+        
+        if(pb.isVisible()){
+            pb.toFront();
+        }else{
+            Desktop.add(pb);
+            pb.setVisible(true);
+        }
+        
     }//GEN-LAST:event_mnPinjamActionPerformed
 
     private void mnDaftarAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnDaftarAnggotaActionPerformed
-        DaftarAnggota da = new DaftarAnggota();
-        Desktop.add(da);
-        da.setVisible(true);
+        DaftarAnggota da = DaftarAnggota.getIns();
+        da.pack();
+        
+        if(da.isVisible()){
+            da.toFront();
+        }else{
+            Desktop.add(da);
+            da.setVisible(true);
+        }
+        
     }//GEN-LAST:event_mnDaftarAnggotaActionPerformed
 
     /**
